@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <title>Module: Navbar 2</title>
+    </head>
+    <body>
+        <div class="navbar-2">
+            <div class="navbar-2-wrapper">
+                <div class="hide-desktop">
+                    <div class="logo-ham-wrapper">
+                        <div class="logo">
+                            <a href="/index.html"><img src="https://via.placeholder.com/250x90" alt="Company Logo"/></a>
+                        </div>
+                        <div class="hamburger">
+                            <img class="menu-toggle" alt="Menu" src="https://cdn2.hubspot.net/hubfs/400849/website-redesign/hamburger.svg"/>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul class="collapsed main-nav">
+                            <li><a href="#">Nav Item 1</a></li>
+                            <li><a href="#">Nav Item 2</a></li>
+                            <li><a href="#">Nav Item 3</a></li>
+                            <li><a href="#">Nav Item 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hide-mobile">
+                    <div class="menu-wrapper">
+                        <ul class="left-menu">
+                            <li><a href="#">Nav Item 1</a></li>
+                            <li><a href="#">Nav Item 2</a></li>
+                        </ul>
+                        <div class="logo">
+                            <a href="/index.html"><img src="https://via.placeholder.com/250x90" alt="Company Logo"/></a>
+                        </div>
+                        <ul>
+                            <li><a href="#">Nav Item 3</a></li>
+                            <li><a href="#">Nav Item 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .navbar-2 .hide-mobile {
+            display: none;
+        }
+
+        .navbar-2 {
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .navbar-2 .logo-ham-wrapper {
+            position: relative;
+            padding: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-bottom: 1px solid #444;
+        }
+        
+        .navbar-2 .logo-ham-wrapper .logo img {
+            width: 75%;
+        }
+        
+        .navbar-2 .logo-ham-wrapper .hamburger img {
+            width: 40px;
+        }
+        
+        .navbar-2 .items .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar-2 .items .main-nav li {
+            position: absolute;
+            z-index: 9;
+            transition: all 0.3s ease;
+            background-color: #ddd;
+            width: 100%;
+            border-bottom: 1px solid #444
+        }
+        
+        .navbar-2 .items .main-nav li a {
+            padding: 16px;
+            display: block;
+        }
+        
+        .navbar-2 .items .main-nav li:first-of-type {
+            transform: translateY(0%);
+        }
+        
+        .navbar-2 .items .main-nav li:nth-of-type(2) {
+            transform: translateY(100%);
+        }
+        
+        .navbar-2 .items .main-nav li:nth-of-type(3) {
+            transform: translateY(200%);
+        }
+        
+        .navbar-2 .items .main-nav li:last-of-type {
+            transform: translateY(300%);
+        }
+        
+        .navbar-2 .items .main-nav.collapsed li {
+            transform: translateY(-100%);
+        }
+
+        @media screen and (min-width: 960px) {
+            .navbar-2 .hide-mobile {
+                display: block;
+            }
+            .navbar-2 .hide-desktop {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            .navbar-2 {
+                padding: 32px;
+                border-bottom: 1px solid #444;
+            }
+            .navbar-2 .hide-mobile ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-evenly;
+                width: 35%;
+                margin: 0 auto;
+            }
+            .navbar-2 .hide-mobile .menu-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .navbar-2 .hide-mobile {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".menu-toggle").click(function(){
+                $(".main-nav").toggleClass("collapsed");
+            });
+        });
+    </script>
+</html>

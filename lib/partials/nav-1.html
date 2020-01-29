@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <title>Module: Navbar 1</title>
+    </head>
+    <body>
+        <div class="navbar-1">
+            <div class="navbar-1-wrapper">
+                <div class="logo-ham-wrapper">
+                    <div class="logo">
+                        <a href="/index.html"><img src="https://via.placeholder.com/250x90" alt="Company Logo"/></a>
+                    </div>
+                    <div class="hamburger">
+                        <img class="menu-toggle" alt="Menu" src="https://cdn2.hubspot.net/hubfs/400849/website-redesign/hamburger.svg"/>
+                    </div>
+                </div>
+                <div class="items">
+                    <ul class="collapsed main-nav">
+                        <li><a href="#">Nav Item 1</a></li>
+                        <li><a href="#">Nav Item 2</a></li>
+                        <li><a href="#">Nav Item 3</a></li>
+                        <li><a href="#">Nav Item 4</a></li>
+                        <li><a href="#">Nav Item 5</a></li>
+                        <li><a class="nav-btn" href="#">Nav Item 6</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .navbar-1 {
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .navbar-1 .logo-ham-wrapper {
+            position: relative;
+            padding: 16px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-bottom: 1px solid #444;
+        }
+        
+        .navbar-1 .logo-ham-wrapper .logo img {
+            width: 75%;
+        }
+        
+        .navbar-1 .logo-ham-wrapper .hamburger img {
+            width: 40px;
+        }
+        
+        .navbar-1 .items .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .navbar-1 .items .main-nav li {
+            position: absolute;
+            z-index: 9;
+            transition: all 0.3s ease;
+            background-color: #ddd;
+            width: 100%;
+            border-bottom: 1px solid #444
+        }
+        
+        .navbar-1 .items .main-nav li:last-of-type {
+            background-color: red;
+            border-bottom: 0;
+        }
+        
+        .navbar-1 .items .main-nav li a {
+            padding: 16px;
+            display: block;
+        }
+        
+        .navbar-1 .items .main-nav li:last-of-type a {
+            color: #fff;
+        }
+        
+        .navbar-1 .items .main-nav li:first-of-type {
+            transform: translateY(0%);
+        }
+        
+        .navbar-1 .items .main-nav li:nth-of-type(2) {
+            transform: translateY(100%);
+        }
+        
+        .navbar-1 .items .main-nav li:nth-of-type(3) {
+            transform: translateY(200%);
+        }
+        
+        .navbar-1 .items .main-nav li:nth-of-type(4) {
+            transform: translateY(300%);
+        }
+        
+        .navbar-1 .items .main-nav li:nth-of-type(5) {
+            transform: translateY(400%);
+        }
+        
+        .navbar-1 .items .main-nav li:last-of-type {
+            transform: translateY(calc(500% + 5px));
+        }
+        
+        .navbar-1 .items .main-nav.collapsed li {
+            transform: translateY(-100%);
+        }
+        
+        @media screen and (min-width: 960px) {
+            .navbar-1 .logo-ham-wrapper .hamburger {
+                display: none;
+            }
+            .navbar-1 .items .main-nav li {
+                position: static;
+                transform: none !important;
+                border: none;
+                background-color: transparent;
+                text-align: center;
+                width: auto;
+            }
+            .navbar-1 .navbar-1-wrapper {
+                display: flex;
+                align-items: center;
+                max-width: 1140px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .navbar-1 .logo-ham-wrapper {
+                border-bottom: 0;
+                padding: 0;
+                width: 25%;
+            }
+            .navbar-1 .items .main-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .navbar-1 .items .main-nav li a {
+                padding: 0;
+                width: auto;
+            }
+            .navbar-1 {
+                padding: 32px;
+                border-bottom: 1px solid #444;
+            }
+            .navbar-1 .logo-ham-wrapper .logo img {
+                width: 100%;
+            }
+            .navbar-1 .items {
+                width: 75%;
+                max-width: 700px;
+                margin-left: auto;
+            }
+            .navbar-1 .items .main-nav li a.nav-btn {
+                padding: 18px;
+            }
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".menu-toggle").click(function(){
+                $(".main-nav").toggleClass("collapsed");
+            });
+        });
+    </script>
+</html>
+

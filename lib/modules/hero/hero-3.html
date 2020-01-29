@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <title>Module: Hero 2</title>
+   </head>
+   <body style="margin: 0;">
+      <div class="gallery" id="stage">
+         <img src="http://via.placeholder.com/3000x2000">
+         <img src="http://via.placeholder.com/3000x2001">
+         <img src="http://via.placeholder.com/3000x2002">
+         <img src="http://via.placeholder.com/3000x2003">
+         <img src="http://via.placeholder.com/3000x2004">
+         <img src="http://via.placeholder.com/3000x2005">
+         <img src="http://via.placeholder.com/3000x2006">
+         <img src="http://via.placeholder.com/3000x2007">
+      </div>
+   </body>
+   <style>
+      #stage img {
+         position: absolute;
+         width: 98vw;
+         height: 98vh;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      #stage img:nth-of-type(1) {
+         animation-name: fader;
+         animation-delay: 2s;
+         animation-duration: 1s;
+         z-index: 20;
+      }
+      #stage img:nth-of-type(2) {
+         z-index: 10;
+      }
+      #stage img:nth-of-type(n+3) {
+         display: none;
+      }
+
+      @keyframes fader {
+         from { opacity: 1.0; }
+         to   { opacity: 0.0; }
+      }
+
+      body {
+         margin: 0;
+      }
+
+      .gallery {
+         position: relative;
+      }
+   </style>
+   <script>
+      window.addEventListener("DOMContentLoaded", function(e) {
+
+         var stage = document.getElementById("stage");
+         var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+         var arr = stage.getElementsByTagName("img");
+         for(var i=0; i < arr.length; i++) {
+            arr[i].addEventListener("animationend", fadeComplete, false);
+         }
+
+      }, false);
+   </script>
+</html>
