@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+
+</style>
+</head>
+<body>
+
+    <div class="full-width-testimonial" id="testimonials">
+        <div class="section-title">
+            <h2>Section Title</h2>
+        </div>
+        <div class="full-width-testimonial__wrapper" v-if="cards[active]">
+            <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+                <div class="testimonial-wrapper" v-if="transition">
+                    <div class="left-arrow"><i class="fas fa-chevron-left" v-on:click="prevCard" v-if="active"></i></div>
+                    <div class="full-width-testimonial__text-container">{% raw %}
+                        <h4 class="quote">{{ cards[active].quote }}</h4>
+                        <img v-bind:src="cards[active].photos[activeCard].src"/>
+                        <p class="quotee-name">{{ cards[active].name }}</p>
+                        <p class="quotee-company">{{ cards[active].company }}</p>{% endraw %}
+                    </div>
+                    <div class="right-arrow"><i class="fas fa-chevron-right" v-on:click="advanceCard" v-if="active != (cards.length - 1)"></i></div>
+                </div>
+            </transition>
+        </div>
+    </div>
+
+</body>
+<script>
+    new WOW().init();
+    var testimonial = new Vue ({
+        el: '#testimonials',
+        data: {
+        active: 0,
+        activeCard: 0,
+        transition: 1,
+        cards: [
+            {
+            quote: "HEPdata’s brand and footprint speak for itself.  I’ve used them at every institution I’ve been with, most recently at Oakland University where we are partnering with HEP to build a robust matching gift strategy, including employer identification, match screening and their latest technology, eMatch Portal.  They are the trusted source in our industry, and it’s not even close.",
+            name: "Mike Westfall",
+            company: "Vice President University Advancement, Oakland University",
+            photos: [
+                {
+                src: 'https://cdn2.hubspot.net/hubfs/5280041/logo-oakland-small-tp.png',
+                altText: 'Oakland University'
+                }
+            ]
+            },
+            {
+            quote: "Our matching gifts numbers are up 193% this fiscal year which started July 1! We chose HEPdata over others because they are the experts on matching gifts and because of their excellent customer service. eMatch Portal takes the mystery out of matching gifts… We love eMatch Portal!!",
+            name: "Veronica Rose",
+            company: "Director, Workplace and Matching Gift Programs at Juvenile Diabetes Research Foundation, where she has been for 32 years",
+            photos: [
+                {
+                src: 'https://cdn2.hubspot.net/hubfs/5280041/logo-jdrf-small.png',
+                altText: 'Juvenile Diabetes Research Foundation'
+                }
+            ]
+            },
+            {
+            quote: "HEPdata is more than just a vendor, but a long time strategic partner that has supported my institutional engagement and campaign communications efforts throughout the many institutions I have served.",
+            name: "Josem Diaz",
+            company: "Assistant Vice President: Institutional Advancement, Business Operations, Yeshiva University",
+            photos: [
+                {
+                src: 'https://cdn2.hubspot.net/hubfs/5280041/logo-yeshiva-small-tp.png',
+                altText: 'Yeshiva University'
+                }
+            ]
+            },
+            {
+            quote: "We’ve been a HEPdata client for 17 years or more. One of our former associates tried a competitor and, frankly, all we got was double the trouble. HEPdata is the leader in matching gifts… Period!",
+            name: "P. Lucht",
+            company: "Texas A&M, The Association of Former Students",
+            photos: [
+                {
+                src: 'https://cdn2.hubspot.net/hubfs/5280041/logo-texas-am-small.png',
+                altText: 'Texas A&M'
+                }
+            ]
+            }
+        ]
+        },
+        methods: {
+        transitionStart: function() {
+            this.transition = 0;
+            let self = this;
+            setTimeout(function(){
+            self.transition = 1;
+            }, 200);
+        },
+        advanceCard: function () {
+            testimonial.transitionStart()
+            this.active++;
+            this.activeCard = 0
+        },
+        prevCard: function () {
+            testimonial.transitionStart()
+            this.active--;
+            this.activeCard = 0
+        }
+        }
+    });
+</script>
+</html>
