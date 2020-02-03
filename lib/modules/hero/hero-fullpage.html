@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/vendors/scrolloverflow.min.js" integrity="sha256-R7CttZ4L0/szai0hbFUlPDiRaEJmqYuvLhyAOr19vQg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js" integrity="sha256-e13jRNqOX98m6UAwI/yZTpcDseJtA8s86yfFs4Sqrv8=" crossorigin="anonymous"></script>
+<style>
+    h1 {
+        margin-top: 0;
+    }
+</style>
+</head>
+<body style="margin: 0;">
+
+    <div id="fullpage" class="class">
+        <div class="section" id="banner" style="background-image: url('http://via.placeholder.com/2500x1238');">
+            <div class="hero-card-wrapper">
+            <div class="hero-card">
+                <div class="text-container">
+                <h1>2020 family business trends</h1>
+                <p>Insights into 2020 family business trends including business performance, AI, cybersecurity, succession planning, workplace trends, and economic outlook.</p>
+                <a href="#">Read Full Article <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="section" id="banner2" style="background-image: url('http://via.placeholder.com/2500x1239');">
+            <div class="hero-card-wrapper">
+            <div class="hero-card">
+                <div class="text-container">
+                <h1>Shareholder vs. society: Defining your business’s changing role</h1>
+                <p>Creating shareholder wealth was championed as the ultimate role of every CEO until recently. This definition of a business's ultimate purpose has fallen from its boardroom pedestal.</p>
+                <a href="#">Read Full Article <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="section" id="banner" style="background-image: url('http://via.placeholder.com/2500x1240');">
+            <div class="hero-card-wrapper">
+            <div class="hero-card">
+                <div class="text-container">
+                <h1>Why strategic planning is crucial for family businesses</h1>
+                <p>With 2020 in sight, leaders in the United States are confident in the country’s family businesses despite whisperings of a possible recession.</p>
+                <a href="#">Read Full Article <i class="fas fa-long-arrow-alt-right"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new fullpage("#fullpage", {
+        //options
+        sectionSelector: '.section',
+        scrollOverflow: true
+        });
+
+        //methods
+        fullpage_api.setAllowScrolling(true);
+    </script>
+</body>
+</html>
