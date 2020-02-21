@@ -1,0 +1,20 @@
+[ {
+  "id" : "fd756e29-faff-ec56-9d89-10df6a8db233",
+  "name" : "banner_title",
+  "label" : "Banner Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Banner Title"
+}, {
+  "id" : "d4d7a6aa-82e9-3e10-2f9e-dda12b01f45a",
+  "name" : "banner_cta",
+  "label" : "Banner CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "a3ef2416-91e0-48d0-9752-ca3d41902261"
+} ]

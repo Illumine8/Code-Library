@@ -1,0 +1,14 @@
+<div class="column-container">
+  <div class="wrapper">
+    {% for item in module.column_items %}
+    <div class="column-item">
+      <div class="span60">
+        <img src="{{ item.column_image.src }}" alt="{{ item.column_image.alt }}">
+      </div>
+      <div class="span40">
+        {{ item.column_text }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

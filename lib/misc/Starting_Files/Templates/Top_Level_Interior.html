@@ -1,0 +1,27 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    {% include '/Starting_Files/Partials/Head.html' %}
+    {{ standard_header_includes }}
+  </head>
+  <body id="top">
+    <div class="index">
+      {% include '/Starting_Files/Partials/Navigation.html' %}
+      <div class="interior-hero" style="background-image: url(https://via.placeholder.com/2500x750);">
+        <div class="wrapper">
+          <h1>{% text "hero_headline" label="Hero Headline" value="About" no_wrapper=True %}</h1>
+        </div>
+      </div>
+      <div class="body-content">
+        {% widget_container "flex-container" overrideable=false, cell=false, cells='[]', root=false, row=false, per_widget_wrapper_html='', value='', wrapping_html='', label='Body Content', no_wrapper=True %}      
+        {% end_widget_container %}
+      </div>
+      {% include '/Starting_Files/Partials/Footer.html' %}
+    </div>
+    {{ standard_footer_includes }}
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    {% include '/Starting_Files/Partials/Head.html' %}
+    {{ standard_header_includes }}
+  </head>
+  <body id="top">
+    <div class="index">
+      {% include '/Starting_Files/Partials/Navigation.html' %}
+      <div class="main-hero" style="background-image: url(https://via.placeholder.com/2500x1238);">
+        <div class="wrapper">
+          <div class="hero-header">
+            {% widget_block rich_text "hero_header" overrideable=True, label="Hero Header" no_wrapper=True %}
+            {% widget_attribute "html" %}
+              <h1>This is the Hero Headline</h1>
+              <p>This is the Hero Subheadline</p>
+              <a class="btn-primary" href="#">Conversion Point</a>
+            {% end_widget_attribute %}
+            {% end_widget_block %}
+          </div>
+        </div>
+      </div>
+      <div class="body-content">
+        {% widget_container "flex-container" overrideable=false, cell=false, cells='[]', root=false, row=false, per_widget_wrapper_html='', value='', wrapping_html='', label='Body Content', no_wrapper=True %}
+        {% end_widget_container %}
+      </div>
+      {% include '/Starting_Files/Partials/Footer.html' %}
+    </div>
+    {{ standard_footer_includes }}
+  </body>
+</html>

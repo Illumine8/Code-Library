@@ -1,0 +1,76 @@
+[ {
+  "id" : "ff325b88-bc70-0ed5-bb84-5c6bc125db10",
+  "name" : "column_items",
+  "label" : "Column Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "2f7e7354-6c38-e0b8-867a-36d2f2c907a9",
+    "name" : "column_text",
+    "label" : "Column Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h4>Column Title</h4>\n<p>Nunc purus tellus, pharetra sed dapibus eget, cursus et justo. Quisque iaculis molestie turpis quis interdum. Integer in convallis magna, scelerisque tincidunt felis. Quisque accumsan rutrum ultricies. Ut mattis dui a justo molestie, et facilisis est sollicitudin. Aenean at dolor eu nulla cursus lobortis.</p>"
+  }, {
+    "id" : "eded32d7-b6a9-ab83-e3ba-326b648cf28c",
+    "name" : "column_image",
+    "label" : "Column Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://cdn2.hubspot.net/hubfs/6976465/830x529.png",
+      "alt" : "830x529",
+      "width" : 830,
+      "height" : 529,
+      "max_width" : 830,
+      "max_height" : 529
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "column_text" : "<h4>Column Title</h4>\n<p>Nunc purus tellus, pharetra sed dapibus eget, cursus et justo. Quisque iaculis molestie turpis quis interdum. Integer in convallis magna, scelerisque tincidunt felis. Quisque accumsan rutrum ultricies. Ut mattis dui a justo molestie, et facilisis est sollicitudin. Aenean at dolor eu nulla cursus lobortis.</p>",
+    "column_image" : {
+      "size_type" : "auto",
+      "src" : "https://cdn2.hubspot.net/hubfs/6976465/830x529.png",
+      "alt" : "830x529",
+      "width" : 830,
+      "height" : 529,
+      "max_width" : 830,
+      "max_height" : 529
+    }
+  }, {
+    "column_text" : "<h4>Column Title</h4>\n<p>Nunc purus tellus, pharetra sed dapibus eget, cursus et justo. Quisque iaculis molestie turpis quis interdum. Integer in convallis magna, scelerisque tincidunt felis. Quisque accumsan rutrum ultricies. Ut mattis dui a justo molestie, et facilisis est sollicitudin. Aenean at dolor eu nulla cursus lobortis.</p>",
+    "column_image" : {
+      "size_type" : "auto",
+      "src" : "https://cdn2.hubspot.net/hubfs/6976465/830x529.png",
+      "alt" : "830x529",
+      "width" : 830,
+      "height" : 529,
+      "max_width" : 830,
+      "max_height" : 529
+    }
+  }, {
+    "column_text" : "<h4>Column Title</h4>\n<p>Nunc purus tellus, pharetra sed dapibus eget, cursus et justo. Quisque iaculis molestie turpis quis interdum. Integer in convallis magna, scelerisque tincidunt felis. Quisque accumsan rutrum ultricies. Ut mattis dui a justo molestie, et facilisis est sollicitudin. Aenean at dolor eu nulla cursus lobortis.</p>",
+    "column_image" : {
+      "size_type" : "auto",
+      "src" : "https://cdn2.hubspot.net/hubfs/6976465/830x529.png",
+      "alt" : "830x529",
+      "width" : 830,
+      "height" : 529,
+      "max_width" : 830,
+      "max_height" : 529
+    }
+  } ]
+} ]
